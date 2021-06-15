@@ -1,0 +1,177 @@
+/**{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #091921;
+}
+.clock{
+    width: 350px;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #fff url(clock.png);
+    background-size: cover;
+    border-radius: 50%;
+    border: 20px solid #fff;
+    box-shadow: inset 0 0 30px rgba(0,0,0,.1),
+                0 20px 20px rgba(0, 0, 0, .2),
+                0 0 0 4px rgba(255,255,255,1);
+}
+.clock::before{
+    content: '';
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    background: #848484;
+    border: 2px solid #fff;
+    z-index: 100000;
+    border-radius: 50%;
+}
+.hour,
+.min,
+.sec
+{
+    position: absolute;
+}
+.hour,.hr{
+    width: 160px;
+    height: 160px;
+}
+.min,.mn{
+    width: 160px;
+    height: 160px;
+}
+.sec,.sc{
+    width: 230px;
+    height: 230px;
+}
+.hr,.mn,.sc
+{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    border-radius: 50%;
+}
+.hr::before{
+    content: '';
+    position: absolute;
+    width: 8px;
+    height: 80px;
+    background: #848484;
+    z-index: 10;
+    border-radius: 6px 6px 0 0 ;
+}
+.mn::before{
+    content: '';
+    position: absolute;
+    width: 4px;
+    height: 40px;
+    background: #d6d6d6;
+    z-index: 11;
+    border-radius: 6px 6px 0 0 ;
+}
+.sc::before{
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: 155px;
+    background: #ff6767;
+    z-index: 12;
+    border-radius: 6px 6px 0 0 ;
+}
+  html
+```(<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <link rel="stylesheet" href="index.css">
+  
+</head>
+<body>
+  <div class="clock">
+    <div class="hour">
+      <div class="hr" id="hr"></div>
+    </div>
+    <div class="min">
+      <div class="mn" id="mn"></div>
+
+    </div>
+    <div class="second">
+      <div class="sc" id="sc"></div>
+    </div>
+
+  </div>
+  <script src="index.js"></script>
+  
+</body>
+</html>```  
+
+*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: #091921;
+}
+#clockContainer {
+    position: relative;
+    margin: auto;
+    height: 40vw;
+    /*to make the height and width responsive*/
+    width: 40vw;
+    background: url(clock.png) no-repeat;
+    /*setting our background image*/
+    background-size: 100%;
+}
+  
+#hour,
+#minute,
+#second {
+    position: absolute;
+    
+    border-radius: 10px;
+    transform-origin: bottom;
+}
+  
+#hour {
+    width: 1.8%;
+    height: 25%;
+    top: 25%;
+    left: 48.85%;
+    opacity: 0.8;
+    background: black;
+}
+  
+#minute {
+    width: 1.6%;
+    height: 30%;
+    top: 19%;
+    left: 48.9%;
+    opacity: 0.8;
+    background: black;
+}
+  
+#second {
+    width: 1%;
+    height: 40%;
+    top: 9%;
+    left: 49.25%;
+    opacity: 0.8;
+    background:maroon;
+}
